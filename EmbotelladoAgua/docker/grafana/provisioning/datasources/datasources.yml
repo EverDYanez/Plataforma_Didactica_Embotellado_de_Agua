@@ -1,0 +1,24 @@
+apiVersion: 1
+datasources:
+  - name: PostgreSQL
+    type: postgres
+    url: postgres
+    database: smartfactory
+    user: postgres
+    secureJsonData:
+      password: mysecretpassword
+    jsonData:
+      sslmode: disable
+
+  - name: InfluxDB
+    type: influxdb
+    access: proxy
+    url: http://influx:8086
+    isDefault: true
+    basicAuth: true
+    basicAuthUser: admin
+    database: smart_factory
+    user: admin
+    secureJsonData:
+      basicAuthPassword: admin
+      password: admin

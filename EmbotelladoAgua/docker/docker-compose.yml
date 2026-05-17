@@ -1,0 +1,83 @@
+version: '3.6'
+
+x-common-postgres-variables: &common-postgres-variables
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: mysecretpassword
+  
+x-common-influx-variables: &common-influx-variables
+  INFLUXDB_DB: smart_factory
+  INFLUXDB_USER: admin
+  INFLUXDB_USER_PASSWORD: admin
+
+services:
+  grafana:
+    image: spruiktec/libre-grafana
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - grafana_plugins:/var/lib/grafana/plugins
+      # ← Provisioning desde archivos locales (no volumen anónimo)
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      # ← Dashboards exportados
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    environment: 
+      <<: [*common-postgres-variables, *common-influx-variables]
+      TZ: America/Bogota
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    depends_on: 
+      - postgres
+      - influx
+
+  postgres:
+    image: spruiktec/libre-postgres
+    restart: always
+    environment: 
+      <<: *common-postgres-variables
+      TZ: America/Bogota
+    ports:
+      - 5432:5432
+    volumes: 
+      - postgres_data:/var/lib/postgresql/data
+      
+
+  influx:
+    image: influxdb:1.8
+    restart: always
+    ports:
+      - 8086:8086
+    environment: 
+      <<: *common-influx-variables
+      TZ: America/Bogota
+    volumes:
+      - influx_data:/var/lib/influxdb
+
+  postREST:
+    image: postgrest/postgrest:v7.0.1
+    restart: always
+    ports: 
+      - 5436:3000
+    environment:
+      - PGRST_DB_URI=postgres://postgres:mysecretpassword@postgres/smartfactory
+      - PGRST_DB_SCHEMA=public
+      - PGRST_DB_ANON_ROLE=postgres
+      - TZ=America/Bogota
+    depends_on: 
+      - postgres
+
+  simulator:
+    image: spruiktec/libre-simulator
+    restart: always
+    ports:
+      - 1880:1880
+    volumes:
+      # ← Flows exportados se cargan automáticamente
+      - ./nodered/flows.json:/usr/src/node-red/flows.json
+    depends_on:
+      - influx
+
+volumes:
+  grafana_plugins:
+  postgres_data:
+  influx_data:
