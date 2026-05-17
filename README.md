@@ -148,55 +148,6 @@ Este proyecto presenta un **prototipo didáctico de un proceso de embotellado de
 
 ---
 
-## 📁 Estructura del Proyecto
-
-```
-Plataforma-Didactica-Embotellado-de-Agua/
-├── README.md                              # Este archivo
-├── requirements.txt                       # Dependencias Python
-├── embotella.pdf                          # Documento de proyecto (tesis)
-├── botella.txt                            # Contenido textual del proyecto
-│
-├── src/                                   # Código fuente principal
-│   ├── plc_communication.py                # Conexión Snap7 con S7-1200
-│   ├── mqtt_client.py                      # Cliente MQTT para publicación
-│   ├── data_processor.py                   # Procesamiento de datos operativos
-│   ├── raspberry_stage_1_washing.py        # Simulación: Etapa de Lavado
-│   ├── raspberry_stage_2_filling.py        # Simulación: Etapa de Llenado
-│   ├── raspberry_stage_3_capping.py        # Simulación: Etapa de Taponado
-│   └── raspberry_stage_4_labeling.py       # Simulación: Etapa de Etiquetado
-│
-├── node-red/                              # Flujos de Node-RED
-│   ├── flows.json                         # Configuración de flujos
-│   ├── flow-packml.json                   # Flujo de gestión PackML
-│   └── flow-scora-communication.json       # Flujo control SCORA-ER 14
-│
-├── plc/                                   # Programación del PLC
-│   ├── grafcet_logic.st                   # Lógica GRAFCET (Structured Text)
-│   ├── packml_states.db                   # Bloques de datos PackML
-│   └── data_blocks/                       # Bloques de datos del PLC
-│       ├── db_station_1.db
-│       ├── db_station_2.db
-│       ├── db_station_3.db
-│       └── db_station_4.db
-│
-├── cad/                                   # Diseños CAD (impresión 3D)
-│   ├── raspberry_case_display.step        # Case para Raspberry + pantalla
-│   ├── raspberry_case_buttons.step        # Case para botonera
-│   └── sensor_bracket.step                # Soporte para finales de carrera
-│
-├── pcb/                                   # Diseño de PCB
-│   ├── button_panel_schematic.kicad_sch   # Esquemático botonera
-│   ├── button_panel_layout.kicad_pcb       # Layout de PCB
-│   └── gerber/                            # Archivos para manufactura
-│
-├── docker/                                # Configuración Docker (MES)
-│   └── docker-compose.yml                 # Deploy Libre ME
-```
-
----
-
-
 ### Requisitos Previos
 
 **Hardware:**
@@ -370,7 +321,7 @@ Este proyecto está bajo la licencia **Apache 2.0**. Consulta el archivo [LICENS
 **GitHub**: [@EverDYanez](https://github.com/EverDYanez)  
 
 **Autor**: Juan José Tovar Parra  
-**GitHub**: [@JuanTovar](https://github.com/usuario)  
+**GitHub**: [@JuanTovar](https://github.com/JJTovar15)  
 
 
 
