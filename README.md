@@ -3,13 +3,13 @@ Integración de una arquitectura MES para una línea de embotellado automatizada
 # Plataforma Didáctica de Embotellado de Agua - Sistema MES Integrado
 
 
-## 📋 Descripción General
+## Descripción General
 
 Este proyecto presenta un **prototipo didáctico de un proceso de embotellado de agua potable** integrado con una arquitectura **MES (Manufacturing Execution System)** que implementa estándares internacionales de automatización industrial. Combina una **celda flexible de manufactura** con un **manipulador robótico SCORA-ER 14**, cuatro **estaciones de simulación** (Raspberry Pi) y un **PLC Siemens S7-1200**, demostrando la interoperabilidad entre sistemas físicos y digitales en tiempo real.
 
 
 
-## 🏗️ Arquitectura Tecnológica
+## Arquitectura Tecnológica
 
 ### Modelo Jerárquico ISA-95
 
@@ -42,7 +42,7 @@ Este proyecto presenta un **prototipo didáctico de un proceso de embotellado de
 
 ---
 
-## 🔧 Componentes Principales
+## Componentes Principales
 
 ### 1. **Hardware de Control**
 | Componente | Modelo | Función |
@@ -187,7 +187,7 @@ Este proyecto presenta un **prototipo didáctico de un proceso de embotellado de
 
 ---
 
-## 🔗 Topología MQTT
+## Topología MQTT
 
 ```
 embotelladora/
@@ -216,7 +216,7 @@ embotelladora/
 ---
 
 
-## 📈 Casos de Uso Educativos
+## Casos de Uso Educativos
 
 1. **Automatización Industrial**: Entender ciclo de control y retroalimentación
 2. **Redes Industriales**: Implementar MQTT, Snap7, TCP/IP
@@ -227,7 +227,7 @@ embotelladora/
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### PLC No Conecta
 ```
@@ -263,7 +263,7 @@ Soluciones:
 ```
 
 
-## 🤝 Contribuciones
+## Contribuciones
 
 Las contribuciones son bienvenidas. Para colaborar:
 
@@ -274,15 +274,15 @@ Las contribuciones son bienvenidas. Para colaborar:
 5. **Abre** un Pull Request con descripción detallada
 
 ### Áreas de Contribución
-- 🔧 Optimización de código Python
-- 📊 Mejoras en dashboards Grafana
-- 🤖 Integración de más máquinas
-- 📖 Documentación y ejemplos
-- 🧪 Pruebas de estrés y robustez
+- Optimización de código Python
+- Mejoras en dashboards Grafana
+- Integración de más máquinas
+- Documentación y ejemplos
+- Pruebas de estrés y robustez
 
 ---
 
-## 🔮 Recomendaciones Futuras
+##  Recomendaciones Futuras
 
 1. **Sustitución de sensores**: Tecnología capacitiva o inductiva sin contacto
 2. **Reemplazo de bandas**: Nuevas bandas transportadoras de material duradero
@@ -294,7 +294,7 @@ Las contribuciones son bienvenidas. Para colaborar:
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la licencia **Apache 2.0**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
@@ -302,7 +302,7 @@ Este proyecto está bajo la licencia **Apache 2.0**. Consulta el archivo [LICENS
 
 ---
 
-## 📖 Publicación Académica
+## Publicación Académica
 
 **Autores**: Juan José Tovar Parra, Ever David Yañez Carrillo  
 **Código de Estudiantes**: 2205887, 2210790  
@@ -315,7 +315,7 @@ Este proyecto está bajo la licencia **Apache 2.0**. Consulta el archivo [LICENS
 
 ---
 
-## 📞 Contacto
+## Contacto
 
 **Autor**: Ever David Yañez Carrillo  
 **GitHub**: [@EverDYanez](https://github.com/EverDYanez)  
