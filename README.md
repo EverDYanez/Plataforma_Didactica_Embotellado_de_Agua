@@ -179,11 +179,11 @@ Este proyecto presenta un **prototipo didáctico de un proceso de embotellado de
 
 ### Resultados Obtenidos
 
-- ✅ **Latencia promedio**: 103 ms
-- ✅ **Pérdida de mensajes**: 0%
-- ✅ **Tiempo respuesta PLC**: 13 ms promedio
-- ✅ **Uso CPU**: 28%
-- ✅ **Uso RAM**: 10%
+- **Latencia promedio**: 103 ms
+- **Pérdida de mensajes**: 0%
+- **Tiempo respuesta PLC**: 13 ms promedio
+- **Uso CPU**: 28%
+- **Uso RAM**: 10%
 
 ---
 
