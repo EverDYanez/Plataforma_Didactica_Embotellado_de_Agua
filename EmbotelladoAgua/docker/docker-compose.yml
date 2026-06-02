@@ -72,8 +72,7 @@ services:
     ports:
       - 1880:1880
     volumes:
-      # ← Flows exportados se cargan automáticamente
-      - ./nodered/flows.json:/usr/src/node-red/flows.json
+      - nodered_data:/usr/src/node-red
     depends_on:
       - influx
 
@@ -81,3 +80,4 @@ volumes:
   grafana_plugins:
   postgres_data:
   influx_data:
+  nodered_data:
